@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "watch": "esbuild src/pixel-bird.ts --bundle --outfile=public/pixel-bird.js --watch",
+    "build": "esbuild src/pixel-bird.ts --bundle --outfile=public/pixel-bird.js --minify",
+    "serve": "serve public",
+    "dev": "concurrently -p [{name}] -n esbuild,serve -c bgYellow.bold,bgGreen.bold npm:watch npm:serve"
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "esbuild": "^0.17.6",
+    "kaboom": "^2000.2.10",
+    "serve": "^14.2.0"
+  }
+}
